@@ -1,20 +1,16 @@
-// config/contact.ts
+export const contact = {
+  address:
+    "NH-166, Miraj-Kolhapur Highway, Beside Gosavi Mala, Miraj - 416410",
 
-export const contactConfig = {
-  address: "Miraj, Maharashtra, India",
+  phones: [
+    "+91 9421182990",
+    "+91 9421182999",
+    "+91 7388887715",
+  ],
 
-  phone: "+91 98765 43210",
+  email: "pristineimiraj@gmail.com",
 
-  email: "info@pristineenglishschool.com",
+  admissionEmail: "pesmmiraj@gmail.com",
 
-  whatsapp: "+91 98765 43210",
-
-  officeHours: {
-    weekdays: "08:00 AM - 04:00 PM",
-    saturday: "08:00 AM - 12:00 PM",
-    sunday: "Closed",
-  },
-
-  googleMaps:
-    "https://maps.google.com/",
-} as const;
+  website: "https://www.pristineschoolmiraj.com",
+};
