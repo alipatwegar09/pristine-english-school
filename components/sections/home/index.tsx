@@ -7,11 +7,11 @@ import HeroWave from "./hero-wave";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section id="home" className="relative overflow-hidden bg-white">
 
       <HeroBackground />
 
-      <div className="relative z-20 mx-auto max-w-7xl px-6 pt-36 pb-40">
+      <div  className="relative z-20 mx-auto max-w-7xl px-6 pt-36 pb-40">
 
         <div className="grid items-center gap-16 lg:grid-cols-2">
 

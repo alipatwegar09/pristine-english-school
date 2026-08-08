@@ -82,7 +82,7 @@ export default function HeroInfoCard() {
 
         <Card
           icon={<GraduationCap size={28} />}
-          value="15+"
+          value="10+"
           title="Years"
         />
 

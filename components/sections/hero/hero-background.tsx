@@ -15,7 +15,7 @@ export default function HeroBackground() {
         inset-0
         h-full
         w-full
-        object-cover
+        object-cover 
         "
       >
         <source

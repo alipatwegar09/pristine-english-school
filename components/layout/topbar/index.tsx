@@ -20,7 +20,7 @@ export default function TopBar() {
 
           <div className="flex items-center gap-2">
             <Mail size={15} />
-            <span>pristineimiraj@gmail.com</span>
+            <span>pesmmiraj@gmail.com</span>
           </div>
 
         </div>

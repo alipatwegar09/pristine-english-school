@@ -17,5 +17,5 @@ export const aboutData = {
 
   image: "/images/about/about.jpg",
 
-  experience: "15+ Years",
+  experience: "10+ Years",
 };

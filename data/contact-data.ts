@@ -17,7 +17,7 @@ icon:MapPin
 {
 title:"Email Us",
 description:
-"pristineimiraj@gmail.com",
+"pesmmiraj@gmail.com",
 icon:Mail
 },
 

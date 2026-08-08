@@ -167,7 +167,7 @@ export default function HeroContent() {
       {/* CTA Buttons */}
       <div
         className="
-          mt-7
+          mb-4
           flex
           flex-col
           gap-3
