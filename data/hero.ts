@@ -1,5 +1,5 @@
 export const heroData = {
-  badge: "Admissions Open 2026-27",
+  badge: "Admissions Open 2027-28",
 
   title: "Pristine English School",
 

@@ -108,7 +108,7 @@ export default function HeroContent() {
       </h1>
 
       {/* Subtitle */}
-      <h2
+      {/* <h2
         className="
           mt-5
           max-w-2xl
@@ -131,7 +131,7 @@ export default function HeroContent() {
         Character
         <span className="mx-2 text-yellow-400">•</span>
         Innovation
-      </h2>
+      </h2> */}
 
       {/* Description */}
       <p
@@ -219,7 +219,7 @@ export default function HeroContent() {
 
         {/* Secondary CTA */}
         <Link
-          href="tel:+919999999999"
+          href="tel:+91 9421182990"
           className="
             group
             inline-flex

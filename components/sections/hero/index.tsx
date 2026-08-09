@@ -12,7 +12,7 @@ export default function Hero() {
 
   <div className="relative z-10 mx-auto max-w-7xl px-6">
 
-    <div className="grid min-h-screen items-center lg:grid-cols-2 gap-16">
+    <div className="grid min-h-screen items-center lg:grid-cols-2 gap-16 mb-2">
 
       <HeroContent />
 

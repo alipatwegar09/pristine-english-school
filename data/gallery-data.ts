@@ -11,7 +11,7 @@ title:"Science Laboratory"
 },
 
 {
-image:"/images/gallery/campus-3.jpeg",
+image:"/images/gallery/campus-3.png",
 title:"Sports Activities"
 },
 

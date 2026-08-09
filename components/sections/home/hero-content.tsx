@@ -2,156 +2,354 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { GraduationCap, PlayCircle } from "lucide-react";
+import {
+  GraduationCap,
+  PlayCircle,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 
 export default function HeroContent() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -80 }}
+      initial={{ opacity: 0, x: -60 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative z-30"
+      transition={{
+        duration: 0.9,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
+        relative
+        z-30
+        max-w-3xl
+        font-[var(--font-jakarta)]
+      "
     >
-      {/* Badge */}
+      {/* =========================
+          ADMISSION BADGE
+      ========================== */}
 
       <motion.div
-        initial={{ opacity: 0, y: -25 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="inline-flex items-center gap-3 rounded-full border border-yellow-400 bg-yellow-500 px-6 py-3 shadow-xl"
+        transition={{
+          delay: 0.15,
+          duration: 0.6,
+        }}
+        className="
+          inline-flex
+          items-center
+          gap-2.5
+          rounded-full
+          border
+          border-white/30
+          bg-white/10
+          px-4
+          py-2
+          shadow-lg
+          backdrop-blur-xl
+        "
       >
-        <GraduationCap className="text-slate-900" size={20} />
+        <span className="relative flex h-2.5 w-2.5">
+          <span
+            className="
+              absolute
+              inline-flex
+              h-full
+              w-full
+              animate-ping
+              rounded-full
+              bg-yellow-400
+              opacity-75
+            "
+          />
 
-        <span className="text-sm font-bold uppercase tracking-wide text-slate-900">
+          <span
+            className="
+              relative
+              inline-flex
+              h-2.5
+              w-2.5
+              rounded-full
+              bg-yellow-400
+            "
+          />
+        </span>
+
+        <span
+          className="
+            text-[11px]
+            font-bold
+            uppercase
+            tracking-[0.16em]
+            text-white
+            sm:text-xs
+          "
+        >
           Admissions Open 2026–27
         </span>
+
+        <Sparkles
+          size={14}
+          className="text-yellow-400"
+        />
       </motion.div>
 
-      {/* Heading */}
+      {/* =========================
+          MAIN HEADING
+      ========================== */}
 
       <motion.h1
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 35 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.35 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1],
+        }}
         className="
-        mt-8
-        text-5xl
-        font-black
-        leading-none
-        text-white
-        sm:text-6xl
-        lg:text-7xl
-        xl:text-8xl
+          mt-7
+          max-w-4xl
+          text-[clamp(3rem,7vw,6.8rem)]
+          font-extrabold
+          leading-[0.94]
+          tracking-[-0.055em]
+          text-white
+          drop-shadow-[0_6px_25px_rgba(0,0,0,0.35)]
         "
       >
         Empowering
+        <br />
+
+        <span className="text-white">
+          Young Minds
+        </span>
 
         <br />
 
-        Young Minds
+        <span className="text-white">
+          For{" "}
+        </span>
 
-        <br />
-
-        For{" "}
-
-        <span className="text-yellow-400">
+        <span
+          className="
+            bg-gradient-to-r
+            from-yellow-300
+            via-yellow-400
+            to-amber-300
+            bg-clip-text
+            text-transparent
+          "
+        >
           Tomorrow
         </span>
       </motion.h1>
 
-      {/* Underline */}
+      {/* =========================
+          ACCENT LINE
+      ========================== */}
 
       <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: 220 }}
-        transition={{ delay: 0.7, duration: 0.8 }}
-        className="mt-4 h-1 rounded-full bg-yellow-400"
+        initial={{ width: 0, opacity: 0 }}
+        animate={{ width: 170, opacity: 1 }}
+        transition={{
+          delay: 0.75,
+          duration: 0.8,
+        }}
+        className="
+          mt-5
+          h-[4px]
+          rounded-full
+          bg-gradient-to-r
+          from-yellow-400
+          to-transparent
+        "
       />
 
-      {/* Description */}
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.9 }}
-        className="
-        mt-8
-        max-w-xl
-        text-lg
-        leading-9
-        text-slate-200
-        lg:text-xl
-        "
-      >
-        At <strong>Pristine English School</strong>, we inspire
-        young minds through quality education, innovative teaching,
-        technology-integrated learning and strong values that prepare
-        every child for a brighter future.
-      </motion.p>
-
-      {/* Buttons */}
+      {/* =========================
+          TAGLINE
+      ========================== */}
 
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1 }}
-        className="mt-10 flex flex-wrap gap-5"
+        transition={{
+          delay: 0.85,
+          duration: 0.7,
+        }}
+        className="mt-5"
       >
-        {/* Apply */}
+        <p
+          className="
+            text-base
+            font-semibold
+            tracking-wide
+            text-white
+            sm:text-lg
+          "
+        >
+          Excellence in{" "}
+          <span className="text-yellow-400">
+            Education
+          </span>
+          {" "}•{" "}
+          Character
+          {" "}•{" "}
+          Innovation
+        </p>
+      </motion.div>
+
+      {/* =========================
+          DESCRIPTION
+      ========================== */}
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 1,
+          duration: 0.7,
+        }}
+        className="
+          mt-5
+          max-w-2xl
+          text-sm
+          font-medium
+          leading-7
+          text-white/85
+          sm:text-base
+          sm:leading-8
+          lg:text-lg
+        "
+      >
+        At{" "}
+        <strong className="font-bold text-white">
+          Pristine English School
+        </strong>
+        , we nurture confident, compassionate and
+        future-ready learners through quality education,
+        innovative teaching, technology-integrated learning
+        and strong values.
+      </motion.p>
+
+      {/* =========================
+          BUTTONS
+      ========================== */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 1.15,
+          duration: 0.7,
+        }}
+        className="
+          mt-8
+          flex
+          flex-col
+          gap-3
+          sm:flex-row
+          sm:items-center
+        "
+      >
+        {/* Admission Button */}
 
         <Link href="#contact">
           <button
             className="
-            flex
-            items-center
-            gap-3
-            rounded-2xl
-            bg-yellow-400
-            px-8
-            py-4
-            text-lg
-            font-bold
-            text-slate-900
-            shadow-2xl
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:scale-105
-            hover:bg-yellow-300
+              group
+              flex
+              w-full
+              items-center
+              justify-center
+              gap-3
+              rounded-full
+              bg-yellow-400
+              px-7
+              py-3.5
+              text-sm
+              font-bold
+              text-slate-950
+              shadow-[0_10px_35px_rgba(250,204,21,0.3)]
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:bg-yellow-300
+              hover:shadow-[0_15px_45px_rgba(250,204,21,0.4)]
+              sm:w-auto
+              sm:px-8
+              sm:py-4
             "
           >
-            <GraduationCap size={22} />
+            <GraduationCap size={19} />
 
-            Admission Open
+            <span>
+              Admission Open
+            </span>
+
+            <ArrowRight
+              size={18}
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+              "
+            />
           </button>
         </Link>
 
-        {/* Video */}
+        {/* Campus Tour */}
 
         <button
           className="
-          flex
-          items-center
-          gap-3
-          rounded-2xl
-          border-2
-          border-white/50
-          bg-white/10
-          px-8
-          py-4
-          text-lg
-          font-semibold
-          text-white
-          backdrop-blur-xl
-          transition-all
-          duration-300
-          hover:bg-white/20
+            group
+            flex
+            w-full
+            items-center
+            justify-center
+            gap-3
+            rounded-full
+            border
+            border-white/40
+            bg-white/10
+            px-7
+            py-3.5
+            text-sm
+            font-semibold
+            text-white
+            shadow-lg
+            backdrop-blur-xl
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-white/70
+            hover:bg-white/20
+            sm:w-auto
+            sm:px-8
+            sm:py-4
           "
         >
-          <PlayCircle
-            size={30}
-            className="text-yellow-400"
-          />
+          <span
+            className="
+              flex
+              h-8
+              w-8
+              items-center
+              justify-center
+              rounded-full
+              bg-yellow-400/20
+            "
+          >
+            <PlayCircle
+              size={19}
+              className="
+                text-yellow-400
+                transition-transform
+                duration-300
+                group-hover:scale-110
+              "
+            />
+          </span>
 
           Watch Campus Tour
         </button>

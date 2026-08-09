@@ -85,15 +85,6 @@ export default function MobileNav() {
 
   </div>
 
-  {/* CTA */}
-  <a
-    href="#contact"
-    onClick={() => setOpen(false)}
-    className="mt-8 rounded-lg bg-blue-700 py-4 text-center text-lg font-semibold text-white transition-colors hover:bg-blue-800"
-  >
-    Enquiry Now
-  </a>
-
 </div>
         </div>
       )}
