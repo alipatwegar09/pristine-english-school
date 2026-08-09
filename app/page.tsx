@@ -4,6 +4,7 @@ import Journey from "@/components/sections/journey";
 import WhyChoose from "@/components/sections/why-choose";
 import PrincipalSection from "@/components/sections/principal";
 import Academics from "@/components/sections/academics";
+import AnnualReport from "@/components/sections/annualreport";
 import CampusGallery from "@/components/sections/gallery";
 import FacilityCard from "@/components/sections/facilities"
 import Achievements from "@/components/sections/acheivements";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <WhyChoose />
         <PrincipalSection />
         <Academics/>
+        <AnnualReport/>
         <CampusGallery />
         <FacilityCard/>
         <Achievements />
