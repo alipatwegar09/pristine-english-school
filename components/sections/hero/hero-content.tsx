@@ -66,7 +66,7 @@ export default function HeroContent() {
       className="w-full max-w-3xl"
     >
       {/* Badge */}
-      <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wide text-white backdrop-blur-md sm:px-5 sm:py-2.5 sm:text-sm">
+      <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-wide text-white backdrop-blur-md sm:px-5 sm:py-2.5 sm:text-sm mt-2">
         <span className="mr-2 h-2 w-2 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
         {heroData.badge}
       </div>

@@ -10,7 +10,6 @@ import Achievements from "@/components/sections/acheivements";
 import Events from "@/components/sections/events";
 import Contact from "@/components/sections/contact";
 import Notices from "@/components/sections/notices";
-import Home from "@/components/sections/home"
 export default function HomePage() {
   return (
     <main className="bg-white">
