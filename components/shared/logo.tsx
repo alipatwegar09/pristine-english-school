@@ -7,8 +7,8 @@ export default function Logo() {
       <Image
         src="/images/logo/logo.png"
         alt="Pristine English School"
-        width={100}
-        height={130}
+        width={80}
+        height={100}
         priority className="h-16 w-auto object-contain"
       />
 
