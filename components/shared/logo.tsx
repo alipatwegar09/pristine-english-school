@@ -9,7 +9,7 @@ export default function Logo() {
         alt="Pristine English School"
         width={80}
         height={100}
-        priority className="h-16 w-auto object-contain"
+        priority 
       />
 
       <div>
