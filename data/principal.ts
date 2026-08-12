@@ -18,5 +18,5 @@ Together with our dedicated teachers and supportive parents, we strive to create
 
   designation: "Principal",
 
-  image: "/images/principal/principal.jpg",
+  image: "/images/principal/principal.png",
 };

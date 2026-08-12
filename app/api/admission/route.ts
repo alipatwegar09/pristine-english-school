@@ -129,7 +129,7 @@ export async function POST(req: NextRequest) {
 
       to: [
         {
-          email: "alipatwegar123@gmail.com",
+          email: "pristinemiraj@gmail.com",
           name: "Pristine English School",
         },
       ],

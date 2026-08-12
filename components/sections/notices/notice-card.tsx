@@ -141,7 +141,7 @@ export default function NoticeCard() {
                 </span>
               </div>
 
-              <button
+              {/* <button
                 className="
                 flex
                 items-center
@@ -158,7 +158,7 @@ export default function NoticeCard() {
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </button>
+              </button> */}
             </div>
           </motion.div>
         );

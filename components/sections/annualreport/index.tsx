@@ -71,7 +71,7 @@ export default function AnnualReport() {
             </Link>
 
             {/* Download PDF */}
-            <a
+            {/* <a
               href="/documents/annual-report.pdf"
               download
               className="
@@ -88,7 +88,7 @@ export default function AnnualReport() {
             >
               Download
               <Download size={17} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
