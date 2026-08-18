@@ -15,7 +15,7 @@ export const aboutData = {
 
   button: "Discover Our Journey",
 
-  image: "/images/about/about.jpg",
+  image: "/images/about/hero.jpeg",
 
   experience: "10+ Years",
 };

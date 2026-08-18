@@ -178,44 +178,50 @@ export default function HeroContent() {
         "
       >
         {/* Primary CTA */}
-        <Link
-          href="#contact"
-          className="
-            group
-            inline-flex
-            w-full
-            items-center
-            justify-center
-            gap-2
-            rounded-full
-            bg-yellow-400
-            px-6
-            py-3.5
-            text-sm
-            font-bold
-            text-slate-900
-            shadow-lg
-            shadow-yellow-500/20
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:bg-yellow-300
-            hover:shadow-xl
-            hover:shadow-yellow-400/30
+<a
+  href="#contact"
+  className="
+    group
+    relative
+    z-30
+    inline-flex
+    w-full
+    items-center
+    justify-center
+    gap-2
+    rounded-full
+    bg-yellow-400
+    px-6
+    py-3.5
+    text-sm
+    font-bold
+    text-slate-900
+    shadow-lg
+    shadow-yellow-500/20
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-yellow-300
+    hover:shadow-xl
+    hover:shadow-yellow-400/30
 
-            sm:w-auto
-            sm:px-7
-            sm:py-4
-            sm:text-base
-          "
-        >
-          Enquire Now
+    sm:w-auto
+    sm:px-7
+    sm:py-4
+    sm:text-base
+  "
+>
+  Enquire Now
 
-          <ArrowRight
-            size={19}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </Link>
+  <ArrowRight
+    size={19}
+    className="
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+</a>
 
         {/* Secondary CTA */}
         <Link
