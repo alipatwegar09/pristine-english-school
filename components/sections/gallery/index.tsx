@@ -1,121 +1,63 @@
 import GalleryGrid from "./gallery-grid";
 
+export default function CampusGallery() {
+  return (
+    <section
+      id="gallery"
+      className="
+        overflow-hidden
+        bg-rose-50
+        py-16
+        md:py-24
+        lg:py-32
+      "
+    >
+      <div
+        className="
+          mx-auto
+          max-w-7xl
+          px-5
+          sm:px-6
+        "
+      >
+        {/* Section Heading */}
+        <div
+          className="
+            mb-12
+            text-center
+            md:mb-16
+          "
+        >
+          <h2
+            className="
+              text-3xl
+              font-black
+              text-slate-900
+              sm:text-4xl
+              lg:text-5xl
+            "
+          >
+            Campus Life
+          </h2>
 
-export default function CampusGallery(){
+          <p
+            className="
+              mx-auto
+              mt-4
+              max-w-2xl
+              text-base
+              font-medium
+              text-slate-700
+              sm:text-lg
+            "
+          >
+            Discover our inspiring campus environment
+            where students learn, grow and celebrate.
+          </p>
+        </div>
 
-return (
-
-<section
-
-id="gallery"
-
-className="
-bg-slate-50
-
-py-16
-
-md:py-24
-
-lg:py-32
-
-overflow-hidden
-
-"
-
->
-
-
-<div
-
-className="
-mx-auto
-
-max-w-7xl
-
-px-5
-
-sm:px-6
-
-"
-
->
-
-
-<div
-
-className="
-text-center
-
-mb-12
-
-md:mb-16
-
-"
-
->
-
-
-<h2
-
-className="
-text-3xl
-
-sm:text-4xl
-
-lg:text-5xl
-
-font-black
-
-text-slate-900
-
-"
-
->
-
-Campus Life
-
-</h2>
-
-
-<p
-
-className="
-mt-4
-
-max-w-2xl
-
-mx-auto
-
-text-base
-
-sm:text-lg
-
-font-medium
-
-text-slate-700
-
-"
-
->
-
-Discover our inspiring campus environment
-where students learn, grow and celebrate.
-
-</p>
-
-
-</div>
-
-
-
-<GalleryGrid />
-
-
-</div>
-
-
-</section>
-
-)
-
+        <GalleryGrid />
+      </div>
+    </section>
+  );
 }

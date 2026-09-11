@@ -4,28 +4,27 @@ import { aboutData } from "@/data/about";
 export default function AboutContent() {
   return (
     <div className="w-full">
+
       {/* Badge */}
       <span
         className="
           inline-flex
           max-w-full
+          items-center
           rounded-full
-
-          bg-blue-100
-
+          border
+          border-lime-200
+          bg-lime-50
           px-3
           py-1.5
-
+          font-[var(--font-nunito)]
+          text-xs
+          font-extrabold
+          tracking-wide
+          text-lime-700
           sm:px-4
           sm:py-2
-
-          text-xs
           sm:text-sm
-
-          font-bold
-          tracking-wide
-
-          text-blue-700
         "
       >
         {aboutData.badge}
@@ -35,17 +34,15 @@ export default function AboutContent() {
       <h2
         className="
           mt-4
-          sm:mt-5
-
-          text-[clamp(1.8rem,7vw,3rem)]
-          lg:text-5xl
-
-          font-black
-          leading-[1.1]
-
-          text-slate-900
-
           max-w-2xl
+          font-[var(--font-fredoka)]
+          text-[clamp(1.9rem,7vw,3.2rem)]
+          font-semibold
+          leading-[1.08]
+          tracking-[-0.02em]
+          text-[#092b52]
+          sm:mt-5
+          lg:text-5xl
         "
       >
         {aboutData.title}
@@ -55,21 +52,17 @@ export default function AboutContent() {
       <p
         className="
           mt-4
-          sm:mt-6
-
-          text-sm
-          sm:text-base
-          lg:text-lg
-
-          leading-6
-          sm:leading-7
-          lg:leading-8
-
-          font-medium
-
-          text-slate-700
-
           max-w-2xl
+          font-[var(--font-nunito)]
+          text-sm
+          font-medium
+          leading-6
+          text-slate-600
+          sm:mt-6
+          sm:text-base
+          sm:leading-7
+          lg:text-lg
+          lg:leading-8
         "
       >
         {aboutData.description}
@@ -79,10 +72,9 @@ export default function AboutContent() {
       <div
         className="
           mt-6
-          sm:mt-8
-
           grid
           gap-3
+          sm:mt-8
           sm:gap-4
         "
       >
@@ -90,35 +82,52 @@ export default function AboutContent() {
           <div
             key={item}
             className="
+              group
               flex
               items-start
               gap-2.5
               sm:gap-3
             "
           >
-            <CheckCircle2
-              size={21}
-              strokeWidth={2.5}
+            {/* Check Icon */}
+            <div
               className="
                 mt-0.5
-                flex-shrink-0
-                text-blue-700
-                sm:w-[23px]
-                sm:h-[23px]
+                flex
+                h-7
+                w-7
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                bg-lime-100
+                transition-all
+                duration-300
+                group-hover:scale-110
+                group-hover:bg-lime-200
               "
-            />
+            >
+              <CheckCircle2
+                size={18}
+                strokeWidth={2.5}
+                className="text-lime-700"
+              />
+            </div>
 
+            {/* Feature Text */}
             <span
               className="
+                pt-0.5
+                font-[var(--font-nunito)]
                 text-sm
-                sm:text-base
-
+                font-bold
                 leading-5
+                text-slate-700
+                transition-colors
+                duration-300
+                group-hover:text-[#092b52]
+                sm:text-base
                 sm:leading-6
-
-                font-semibold
-
-                text-slate-800
               "
             >
               {item}

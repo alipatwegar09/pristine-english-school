@@ -6,52 +6,45 @@ export default function Academics() {
   return (
     <section
       id="academics"
-     className="
-py-16
-md:py-24
-bg-white
-"
+      className="
+        bg-violet-50
+        py-16
+        md:py-24
+      "
     >
-      <div className="max-w-7xl mx-auto px-6">
-
+      <div className="mx-auto max-w-7xl px-6">
         {/* Section Heading */}
-        <div className="text-center mb-16">
-
+        <div className="mb-16 text-center">
           <h2
             className="
-           text-3xl
-sm:text-4xl
-md:text-5xl
-            font-extrabold
-            tracking-tight
-            text-gray-900
+              text-3xl
+              font-extrabold
+              tracking-tight
+              text-[#092b52]
+              sm:text-4xl
+              md:text-5xl
             "
           >
             Our Academics
           </h2>
 
-
           <p
             className="
-            mt-5
-            max-w-2xl
-            mx-auto
-            text-lg
-            font-medium
-            text-gray-700
-            leading-relaxed
+              mx-auto
+              mt-5
+              max-w-2xl
+              text-lg
+              font-medium
+              leading-relaxed
+              text-slate-600
             "
           >
             A structured learning journey designed to nurture
             curiosity, creativity, and academic excellence.
           </p>
-
         </div>
 
-
         <AcademicTimeline />
-
-
       </div>
     </section>
   );

@@ -1,10 +1,16 @@
-
 import Link from "next/link";
-import { FileText, ArrowUpRight, Download } from "lucide-react";
+import { FileText, ArrowUpRight } from "lucide-react";
 
 export default function AnnualReport() {
   return (
-    <section className="py-16 sm:py-20">
+    <section
+      className="
+        bg-slate-50
+        py-16
+        sm:py-20
+        md:py-24
+      "
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div
           className="
@@ -19,6 +25,7 @@ export default function AnnualReport() {
             lg:items-center
           "
         >
+          {/* Left Content */}
           <div className="flex items-start gap-4">
             <div
               className="
@@ -32,15 +39,39 @@ export default function AnnualReport() {
             </div>
 
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+              <p
+                className="
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-wider
+                  text-blue-600
+                "
+              >
                 School Publication
               </p>
 
-              <h2 className="mt-1 font-[var(--font-heading)] text-2xl font-bold text-slate-900">
+              <h2
+                className="
+                  mt-1
+                  font-[var(--font-heading)]
+                  text-2xl
+                  font-bold
+                  text-slate-900
+                "
+              >
                 Annual Report
               </h2>
 
-              <p className="mt-1 max-w-xl text-sm leading-6 text-slate-600">
+              <p
+                className="
+                  mt-1
+                  max-w-xl
+                  text-sm
+                  leading-6
+                  text-slate-600
+                "
+              >
                 Explore our latest annual report and learn about the
                 achievements, activities and progress of Pristine English
                 School.
@@ -48,51 +79,40 @@ export default function AnnualReport() {
             </div>
           </div>
 
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            {/* View PDF */}
+          {/* Action */}
+          <div className="w-full sm:w-auto">
             <Link
               href="/documents/annual-report.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="
-                inline-flex items-center justify-center gap-2
+                inline-flex
+                w-full
+                items-center
+                justify-center
+                gap-2
                 rounded-full
                 bg-blue-700
-                px-6 py-3
-                text-sm font-bold text-white
-                shadow-lg shadow-blue-700/20
-                transition-all duration-300
+                px-6
+                py-3
+                text-sm
+                font-bold
+                text-white
+                shadow-lg
+                shadow-blue-700/20
+                transition-all
+                duration-300
                 hover:-translate-y-0.5
                 hover:bg-blue-800
+                sm:w-auto
               "
             >
               View Annual Report
               <ArrowUpRight size={18} />
             </Link>
-
-            {/* Download PDF */}
-            {/* <a
-              href="/documents/annual-report.pdf"
-              download
-              className="
-                inline-flex items-center justify-center gap-2
-                rounded-full
-                border border-slate-200
-                bg-slate-50
-                px-6 py-3
-                text-sm font-bold text-slate-700
-                transition-all duration-300
-                hover:-translate-y-0.5
-                hover:bg-slate-100
-              "
-            >
-              Download
-              <Download size={17} />
-            </a> */}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

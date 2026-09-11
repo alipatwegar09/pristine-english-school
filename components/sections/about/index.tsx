@@ -6,7 +6,7 @@ export default function About() {
     <section
       id="about"
       className="
-        bg-white
+        bg-blue-50
 
         py-12
         sm:py-16

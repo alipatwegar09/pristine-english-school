@@ -6,7 +6,7 @@ export default function Contact() {
     <section
       id="contact"
       className="
-        bg-white
+        bg-slate-50
         py-12
         sm:py-16
         md:py-24

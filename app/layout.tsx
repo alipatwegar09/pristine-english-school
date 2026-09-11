@@ -1,31 +1,25 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Playfair_Display, Poppins } from "next/font/google";
+import { Nunito, Fredoka } from "next/font/google";
 
 import Navbar from "@/components/layout/navbar";
 import TopBar from "@/components/layout/topbar";
 import Footer from "@/components/layout/Footer";
 
 import { schoolData } from "@/data/school";
-import { Plus_Jakarta_Sans } from "next/font/google";
 
-const jakarta = Plus_Jakarta_Sans({
+const nunito = Nunito({
   subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-nunito",
   display: "swap",
 });
 
-const poppins = Poppins({
+const fredoka = Fredoka({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-fredoka",
   display: "swap",
 });
 
@@ -34,7 +28,6 @@ export const metadata: Metadata = {
     default: schoolData.name,
     template: `%s | ${schoolData.name}`,
   },
-
   description: schoolData.mission,
 };
 
@@ -46,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${poppins.variable}`}
+      className={`${nunito.variable} ${fredoka.variable}`}
     >
-      <body className={`${jakarta.variable} antialiased`}>
+      <body className="font-[var(--font-nunito)] antialiased">
         <TopBar />
 
         <Navbar />
