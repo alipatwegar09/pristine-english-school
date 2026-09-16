@@ -5,7 +5,7 @@ export default function Journey() {
     <section
       className="
         overflow-hidden
-        bg-blue-50
+        bg-[#F5F3FF]
         py-20
         md:py-28
         lg:py-32
@@ -18,12 +18,12 @@ export default function Journey() {
             className="
               inline-flex
               rounded-full
-              bg-blue-100
+              bg-[#EDE9FE]
               px-5
               py-2
               text-sm
               font-semibold
-              text-blue-700
+              text-[#6D5BD0]
             "
           >
             OUR JOURNEY
@@ -34,7 +34,7 @@ export default function Journey() {
               mt-6
               text-4xl
               font-bold
-              text-[#092b52]
+              text-[#092B52]
               lg:text-5xl
             "
           >
@@ -62,3 +62,4 @@ export default function Journey() {
     </section>
   );
 }
+

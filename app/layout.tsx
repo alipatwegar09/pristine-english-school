@@ -8,7 +8,7 @@ import TopBar from "@/components/layout/topbar";
 import Footer from "@/components/layout/Footer";
 
 import { schoolData } from "@/data/school";
-
+import WhatsAppChat from "@/components/shared/WhatsAppChat";
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -49,6 +49,7 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
+         <WhatsAppChat />
       </body>
     </html>
   );
