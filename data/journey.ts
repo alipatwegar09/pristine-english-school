@@ -1,26 +1,42 @@
 export const journeyData = [
   {
-    year: "The Beginning",
-    title: "Started from a Humble Basement",
+    year: "2015",
+    title: "A Small Beginning",
     description:
-      "Our journey began with a small tuition setup and preschool, driven by passion and dedication towards quality education.",
+      "Our journey began with a simple dream — to create a joyful learning environment where every child feels valued, supported, and encouraged to grow.",
+    image: "/images/journey/journey-2015.jpg",
+    color: "yellow",
   },
   {
-    year: "Community Trust",
-    title: "Growing with Parents' Support",
+    year: "2018",
+    title: "Growing Together",
     description:
-      "Parents appreciated our commitment, helping us earn trust and inspiring us to expand further.",
+      "As more families joined our journey, we expanded our classrooms, activities, and learning experiences while keeping every child at the heart of our school.",
+    image: "/images/journey/journey-2018.jpg",
+    color: "pink",
   },
   {
-    year: "Expansion",
-    title: "Shifted to a Larger Campus",
+    year: "2021",
+    title: "Learning Beyond Books",
     description:
-      "As student strength increased, we moved into a bigger rented campus with improved learning facilities.",
+      "We introduced more activity-based learning, technology, creative projects, and experiences that helped children discover their interests and confidence.",
+    image: "/images/journey/journey-2021.jpg",
+    color: "blue",
   },
   {
-    year: "Today",
-    title: "A Modern Educational Campus",
+    year: "2024",
+    title: "New Ideas, New Dreams",
     description:
-      "Today Pristine English School proudly provides modern education from Playgroup to 12th Science in a safe and inspiring environment.",
+      "Our classrooms continued evolving with modern learning methods, technology integration, science activities, and opportunities for students to explore.",
+    image: "/images/journey/journey-2024.jpg",
+    color: "green",
+  },
+  {
+    year: "2026",
+    title: "Looking Towards Tomorrow",
+    description:
+      "Today, we continue building a nurturing school community where children learn with curiosity, kindness, creativity, and confidence.",
+    image: "/images/journey/journey-2026.jpg",
+    color: "purple",
   },
 ];
