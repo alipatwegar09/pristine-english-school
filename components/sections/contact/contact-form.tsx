@@ -6,6 +6,7 @@ import { Send } from "lucide-react";
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+const [classDropdownOpen, setClassDropdownOpen] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,12 +26,15 @@ export default function ContactForm() {
       [e.target.name]: e.target.value,
     });
   };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  if (!formData.className) {
+    setClassDropdownOpen(true);
+    return;
+  }
 
-    setLoading(true);
-    setSuccess(false);
+  setLoading(true);
 
     try {
       const response = await fetch("/api/admission", {
@@ -43,17 +47,19 @@ export default function ContactForm() {
 
       const data = await response.json();
 
-      if (data.success) {
-        setSuccess(true);
+ if (data.success) {
+  setSuccess(true);
+  setClassDropdownOpen(false);
 
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          className: "",
-          message: "",
-        });
-      } else {
+  setFormData({
+    name: "",
+    phone: "",
+    email: "",
+    className: "",
+    message: "",
+  });
+}
+      else {
         alert("Something went wrong.");
       }
     } catch (error) {
@@ -190,42 +196,133 @@ export default function ContactForm() {
         </div>
 
         {/* Class */}
+{/* Class */}
+<div className="relative">
+  <label className="mb-2 block text-sm font-bold text-slate-700">
+    Select Class
+  </label>
 
-        <div>
-          <label className="mb-2 block text-sm font-bold text-slate-700">
-            Select Class
-          </label>
+  {/* Custom Dropdown Button */}
+  <button
+    type="button"
+    onClick={() =>
+      setClassDropdownOpen((prev) => !prev)
+    }
+    className={`
+      flex
+      w-full
+      items-center
+      justify-between
+      rounded-xl
+      border
+      border-slate-200
+      bg-slate-50
+      px-4
+      py-3.5
+      text-left
+      text-slate-900
+      outline-none
+      transition
+      focus:border-blue-600
+      focus:bg-white
+      focus:ring-4
+      focus:ring-blue-100
+      ${
+        formData.className
+          ? "text-slate-900"
+          : "text-slate-400"
+      }
+    `}
+  >
+    <span className="truncate">
+      {formData.className || "Select Class"}
+    </span>
 
-          <select
-            name="className"
-            value={formData.className}
-            onChange={handleChange}
-            required
-            className="
+    <svg
+      className={`
+        ml-2
+        h-4
+        w-4
+        shrink-0
+        transition-transform
+        duration-200
+        ${
+          classDropdownOpen
+            ? "rotate-180"
+            : ""
+        }
+      `}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m6 9 6 6 6-6"
+      />
+    </svg>
+  </button>
+
+  {/* Dropdown Options */}
+  {classDropdownOpen && (
+    <div
+      className="
+        absolute
+        left-0
+        right-0
+        top-full
+        z-50
+        mt-1
+        max-h-52
+        overflow-y-auto
+        rounded-xl
+        border
+        border-slate-200
+        bg-white
+        shadow-xl
+      "
+    >
+      {[
+        "Playgroup",
+        "Nursery",
+        "Primary",
+        "Secondary",
+        "Higher Secondary Science",
+      ].map((className) => (
+        <button
+          key={className}
+          type="button"
+          onClick={() => {
+            setFormData((prev) => ({
+              ...prev,
+              className,
+            }));
+
+            setClassDropdownOpen(false);
+          }}
+          className={`
+            block
             w-full
-            rounded-xl
-            border
-            border-slate-200
-            bg-slate-50
             px-4
-            py-3.5
-            text-slate-900
-            outline-none
+            py-3
+            text-left
+            text-sm
             transition
-            focus:border-blue-600
-            focus:bg-white
-            focus:ring-4
-            focus:ring-blue-100
-          "
-          >
-            <option value="">Select Class</option>
-            <option>Playgroup</option>
-            <option>Nursery</option>
-            <option>Primary</option>
-            <option>Secondary</option>
-            <option>Higher Secondary Science</option>
-          </select>
-        </div>
+            ${
+              formData.className === className
+                ? "bg-blue-50 font-semibold text-blue-700"
+                : "text-slate-700 hover:bg-blue-50 hover:text-blue-700"
+            }
+          `}
+        >
+          {className}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
 
         {/* Message */}
 

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function HeroImage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  const [classDropdownOpen, setClassDropdownOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -205,42 +205,118 @@ export default function HeroImage() {
     </div>
 
     {/* Select Class */}
-    <div>
-      <label className="mb-0.5 block text-[10px] font-bold text-gray-900">
-        Select Class <span className="text-red-600">*</span>
-      </label>
+    {/* Select Class */}
+<div className="relative">
+  <label className="mb-0.5 block text-[10px] font-bold text-gray-900">
+    Select Class <span className="text-red-600">*</span>
+  </label>
 
-      <select
-        name="className"
-        value={formData.className}
-        onChange={handleChange}
-        required
-        className="
-          h-8
-          w-full
-          rounded-md
-          border
-          border-gray-300
-          bg-white
-          px-2
-          text-[11px]
-          text-gray-900
-          outline-none
-          focus:border-orange-400
-          focus:ring-1
-          focus:ring-orange-200
-        "
-      >
-        <option value="">Select Class</option>
-        <option value="Playgroup">Playgroup</option>
-        <option value="Nursery">Nursery</option>
-        <option value="Primary">Primary</option>
-        <option value="Secondary">Secondary</option>
-        <option value="Higher Secondary Science">
-          Higher Secondary Science
-        </option>
-      </select>
+  {/* Dropdown Button */}
+  <button
+    type="button"
+    onClick={() => setClassDropdownOpen(!classDropdownOpen)}
+    className="
+      flex
+      h-8
+      w-full
+      items-center
+      justify-between
+      rounded-md
+      border
+      border-gray-300
+      bg-white
+      px-2
+      text-[11px]
+      text-gray-900
+      outline-none
+      focus:border-orange-400
+      focus:ring-1
+      focus:ring-orange-200
+    "
+  >
+    <span
+      className={
+        formData.className
+          ? "text-gray-900"
+          : "text-gray-500"
+      }
+    >
+      {formData.className || "Select Class"}
+    </span>
+
+    {/* Arrow */}
+    <svg
+      className={`h-3 w-3 transition-transform duration-200 ${
+        classDropdownOpen ? "rotate-180" : ""
+      }`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m6 9 6 6 6-6"
+      />
+    </svg>
+  </button>
+
+  {/* Custom Options */}
+  {classDropdownOpen && (
+    <div
+      className="
+        absolute
+        left-0
+        right-0
+        z-50
+        mt-1
+        overflow-hidden
+        rounded-md
+        border
+        border-gray-200
+        bg-white
+        shadow-lg
+      "
+    >
+      {[
+        "Playgroup",
+        "Nursery",
+        "Primary",
+        "Secondary",
+        "Higher Secondary Science",
+      ].map((className) => (
+        <button
+          key={className}
+          type="button"
+          onClick={() => {
+            handleChange({
+              target: {
+                name: "className",
+                value: className,
+              },
+            } as React.ChangeEvent<HTMLSelectElement>);
+
+            setClassDropdownOpen(false);
+          }}
+          className="
+            block
+            w-full
+            px-2
+            py-1.5
+            text-left
+            text-[11px]
+            text-gray-900
+            hover:bg-orange-50
+            hover:text-orange-600
+          "
+        >
+          {className}
+        </button>
+      ))}
     </div>
+  )}
+</div>
 
     {/* Message */}
     <div>

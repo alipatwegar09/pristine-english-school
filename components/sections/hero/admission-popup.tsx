@@ -17,7 +17,7 @@ export default function AdmissionPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
+const [classDropdownOpen, setClassDropdownOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -73,14 +73,17 @@ export default function AdmissionPopup() {
   };
 
   /* ================= SUBMIT ================= */
+const handleSubmit = async (
+  e: FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-  const handleSubmit = async (
-    e: FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+  if (!formData.className) {
+    setClassDropdownOpen(true);
+    return;
+  }
 
-    setIsSubmitting(true);
-    setSubmitted(false);
+  setIsSubmitting(true);
 
     try {
       const response = await fetch("/api/admission", {
@@ -511,87 +514,137 @@ export default function AdmissionPopup() {
                 />
 
                 {/* ================= CLASS ================= */}
+{/* ================= CLASS ================= */}
+<div className="relative">
+  {/* Class Icon */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-3.5
+      top-1/2
+      z-10
+      -translate-y-1/2
+      text-slate-500
+    "
+  >
+    <Building2 size={18} />
+  </div>
 
-                <div className="relative">
-                  <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      left-3.5
-                      top-1/2
-                      z-10
-                      -translate-y-1/2
-                      text-slate-500
-                    "
-                  >
-                    <Building2 size={18} />
-                  </div>
+  {/* Dropdown Button */}
+  <button
+    type="button"
+    onClick={() =>
+      setClassDropdownOpen((prev) => !prev)
+    }
+    className={`
+      flex
+      h-[48px]
+      w-full
+      items-center
+      justify-between
+      rounded-lg
+      border
+      border-slate-300
+      bg-white
+      pl-10
+      pr-9
+      text-left
+      text-xs
+      outline-none
+      transition
+      focus:border-red-500
+      focus:ring-2
+      focus:ring-red-100
+      ${
+        formData.className
+          ? "text-slate-800"
+          : "text-slate-400"
+      }
+    `}
+  >
+    <span className="truncate">
+      {formData.className || "Select Class *"}
+    </span>
 
-                  <select
-                    name="className"
-                    value={formData.className}
-                    onChange={handleChange}
-                    required
-                    className={`
-                      h-[48px]
-                      w-full
-                      appearance-none
-                      rounded-lg
-                      border
-                      border-slate-300
-                      bg-white
-                      pl-10
-                      pr-9
-                      text-xs
-                      outline-none
-                      transition
-                      focus:border-red-500
-                      focus:ring-2
-                      focus:ring-red-100
-                      ${
-                        formData.className
-                          ? "text-slate-800"
-                          : "text-slate-400"
-                      }
-                    `}
-                  >
-                    <option value="" disabled>
-                      Select Class *
-                    </option>
+    <ChevronDown
+      size={17}
+      className={`
+        pointer-events-none
+        absolute
+        right-3
+        top-1/2
+        -translate-y-1/2
+        text-slate-500
+        transition-transform
+        duration-200
+        ${
+          classDropdownOpen
+            ? "rotate-180"
+            : ""
+        }
+      `}
+    />
+  </button>
 
-                    <option value="Playgroup">
-                      Playgroup
-                    </option>
+  {/* Dropdown Options */}
+  {classDropdownOpen && (
+    <div
+      className="
+        absolute
+        left-0
+        right-0
+        top-full
+        z-[100]
+        mt-1
+        max-h-[180px]
+        overflow-y-auto
+        rounded-lg
+        border
+        border-slate-200
+        bg-white
+        shadow-xl
+      "
+    >
+      {[
+        "Playgroup",
+        "Nursery",
+        "Primary",
+        "Secondary",
+        "Higher Secondary Science",
+      ].map((className) => (
+        <button
+          key={className}
+          type="button"
+          onClick={() => {
+            setFormData((prev) => ({
+              ...prev,
+              className: className,
+            }));
 
-                    <option value="Nursery">
-                      Nursery
-                    </option>
-
-                    <option value="Primary">
-                      Primary
-                    </option>
-
-                    <option value="Secondary">
-                      Secondary
-                    </option>
-
-                    <option value="Higher Secondary Science">
-                      Higher Secondary Science
-                    </option>
-                  </select>
-
-                  <ChevronDown
-                    size={17}
-                    className="
-                      pointer-events-none
-                      absolute
-                      right-3
-                      top-1/2
-                      -translate-y-1/2
-                      text-slate-500
-                    "
-                  />
-                </div>
+            setClassDropdownOpen(false);
+          }}
+          className={`
+            block
+            w-full
+            px-3
+            py-2.5
+            text-left
+            text-xs
+            transition
+            ${
+              formData.className === className
+                ? "bg-red-50 font-semibold text-red-600"
+                : "text-slate-700 hover:bg-red-50 hover:text-red-600"
+            }
+          `}
+        >
+          {className}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
 
                 {/* ================= MESSAGE ================= */}
 
