@@ -9,7 +9,7 @@ logo:
 
 
 email:
-"pesmmiraj@gmail.com",
+"pristinemiraj@gmail.com",
 
 
 location:
