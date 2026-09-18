@@ -36,7 +36,7 @@ export const journeyData = [
     title: "Looking Towards Tomorrow",
     description:
       "Today, we continue building a nurturing school community where children learn with curiosity, kindness, creativity, and confidence.",
-    image: "/images/journey/journey-2026.",
+    image: "/images/journey/journey-2026.png",
     color: "purple",
   },
 ];
