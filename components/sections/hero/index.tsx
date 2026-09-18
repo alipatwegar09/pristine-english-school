@@ -6,7 +6,7 @@ import AdmissionPopup from "./admission-popup";
 export default function Hero() {
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden">
+      <section id="home" className="relative min-h-screen overflow-hidden">
         <HeroBackground />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">

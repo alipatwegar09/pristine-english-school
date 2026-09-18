@@ -18,7 +18,7 @@ export default function Logo() {
         </h2>
 
         <p className="text-sm text-blue-700 font-semibold">
-          English School
+          English School, Miraj.
         </p>
       </div>
     </Link>

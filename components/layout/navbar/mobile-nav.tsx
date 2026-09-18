@@ -46,7 +46,7 @@ export default function MobileNav() {
                 Pristine
               </h2>
               <p className="text-xs text-gray-500">
-                English School
+                English School, Miraj.
               </p>
             </div>
 
