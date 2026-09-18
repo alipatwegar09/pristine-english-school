@@ -142,6 +142,7 @@ const handleSubmit = async (
           bg-white
           shadow-2xl
           lg:rounded-[22px]
+          pr-2
         "
       >
         {/* ================= CLOSE ================= */}
@@ -331,14 +332,7 @@ const handleSubmit = async (
 
             <div
               className="
-                mb-3
-                flex
-                items-center
-                gap-2.5
-                rounded-full
-                bg-red-50
-                px-3.5
-                py-2
+               mb-3 flex items-center gap-2.5 rounded-full bg-red-50 px-5 py-2 pr-14
               "
             >
               <div

@@ -28,7 +28,7 @@ export const journeyData = [
     title: "New Ideas, New Dreams",
     description:
       "Our classrooms continued evolving with modern learning methods, technology integration, science activities, and opportunities for students to explore.",
-    image: "/images/journey/journey-2024.jpg",
+    image: "/images/journey/journey-2024.png",
     color: "green",
   },
   {
@@ -36,7 +36,7 @@ export const journeyData = [
     title: "Looking Towards Tomorrow",
     description:
       "Today, we continue building a nurturing school community where children learn with curiosity, kindness, creativity, and confidence.",
-    image: "/images/journey/journey-2026.jpg",
+    image: "/images/journey/journey-2026.",
     color: "purple",
   },
 ];
