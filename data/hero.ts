@@ -6,7 +6,7 @@ export const heroData = {
   subtitle: "Empowering Young Minds For A Better Tomorrow",
 
   description:
-    "Nurturing confident, compassionate and future-ready learners through academic excellence, technology integrated learning and value-based education.",
+    "Pristine English School, Miraj, nurtures confident, compassionate and future-ready learners through academic excellence, technology-integrated learning and value-based education.",
 
   image: "/images/hero/hero.jpg",
 };

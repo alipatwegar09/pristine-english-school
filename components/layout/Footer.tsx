@@ -5,10 +5,10 @@ import Link from "next/link";
 import {
   MapPin,
   Mail,
-  ArrowRight,
+  ArrowRight
 } from "lucide-react";
 import { schoolData } from "@/data/school";
-
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 const quickLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -206,7 +206,29 @@ export default function Footer() {
                 <span>{schoolData.email}</span>
               </p>
             </div>
+<div className="flex flex-col gap-3 pt-2">
+  <Link
+    href="https://www.instagram.com/pristine_english_school_miraj/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex items-center gap-3 font-[var(--font-nunito)] text-sm font-semibold text-slate-300 transition-colors duration-300 hover:text-lime-300"
+  >
+    <FaInstagram size={20} className="shrink-0 text-lime-300" />
+    <span>Instagram</span>
+  </Link>
 
+  <Link
+    href="https://www.youtube.com/@pristineenglishschoolmiraj837"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+    className="flex items-center gap-3 font-[var(--font-nunito)] text-sm font-semibold text-slate-300 transition-colors duration-300 hover:text-lime-300"
+  >
+    <FaYoutube size={20} className="shrink-0 text-lime-300" />
+    <span>YouTube</span>
+  </Link>
+</div>
             {/* Apply Button */}
             <Link
               href="#contact"

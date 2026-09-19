@@ -9,6 +9,7 @@ import Footer from "@/components/layout/Footer";
 
 import { schoolData } from "@/data/school";
 import WhatsAppChat from "@/components/shared/WhatsAppChat";
+import SchoolSchema from "@/components/seo/SchoolSchema";
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -42,6 +43,7 @@ export default function RootLayout({
       className={`${nunito.variable} ${fredoka.variable}`}
     >
       <body className="font-[var(--font-nunito)] antialiased">
+         <SchoolSchema />
         <TopBar />
 
         <Navbar />
